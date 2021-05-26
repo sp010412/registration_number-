@@ -50,7 +50,7 @@ function conditions() {
     if (textBox.value == "") {
         errorElem.innerHTML = "Enter a registration plate!";
 
-        setTimeout(function () {
+        window.setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3000);
         return;

@@ -90,13 +90,13 @@ var wc = []
 
 function showed() {
     let filteredList1 = list.filter(function (currentElement) {
-        return currentElement.startsWith('ca');
+        return currentElement.startsWith('CA');
     });
     let filteredList2 = list.filter(function (currentElement) {
-        return currentElement.startsWith('pa');
+        return currentElement.startsWith('PA');
     });
     let filteredList3 = list.filter(function (currentElement) {
-        return currentElement.startsWith('wc');
+        return currentElement.startsWith('WC');
     });
 
     var towns = document.querySelector(".slct1");

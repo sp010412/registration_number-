@@ -1,25 +1,80 @@
 body {
-    background: silver;
     text-decoration: none;
+    background: url(http://www.pptbackgrounds.org/uploads/industry-a-plan-of-the-car-powerpoint-backgrounds.jpg) no-repeat center/cover;
 }
 
-
 .container {
-    border: solid 2px;
+    border: none;
     width: 60%;
     text-align: center;
     height: 50vh;
+    margin: auto;
+    margin-left: 12px;
+}
+
+.plates {
+    width: 30%;
+}
+
+h1 {
+    padding: 2%;
+    padding-inline: 8%;
+}
+
+h3 {
+    display: inline;
+    font-size: 25px;
 }
 
 ul {
     list-style-type: none;
 }
 
-li{
-border: solid ;
-border-radius: 10px;
+li {
+    border: solid;
+    border-radius: 10px;
+    width: 25%;
+    margin-left: 5px;
+    display: inline-block;
+}
 
-width: 25%;
-margin-left: 5px;
-display:inline-block;
+button {
+    border-radius: 4px;
+    background-color: grey;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 25px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.adjust{
+    display:flex ;
 }

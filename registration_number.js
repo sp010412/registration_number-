@@ -48,16 +48,31 @@ var valid = /[A-Z]{2} [0-9]{5}/
 function conditions() {
     let key = registrationInsta.getStorePlates();
     if (textBox.value == "") {
-        errorElem.innerHTML = "Enter a registration plate!"
+        errorElem.innerHTML = "Enter a registration plate!";
+
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
     }
+
     else if (valid.test(textBox.value) != true) {
         errorElem.innerHTML = "Input is not a registration plate: eg: CA 1234 OR PA 99965"
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
     }
 
     else if (key === textBox.value) {
-        errorElem.innerHTML = "Regisration plate has been added!"
+        errorElem.innerHTML = "Regisration plate has been added!";
+
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
     }
-   // console.log(list)
+    // console.log(list)
 }
 addBtn.addEventListener('click', conditions);
 

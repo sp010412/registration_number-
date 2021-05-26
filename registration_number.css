@@ -1,0 +1,25 @@
+body {
+    background: silver;
+    text-decoration: none;
+}
+
+
+.container {
+    border: solid 2px;
+    width: 60%;
+    text-align: center;
+    height: 50vh;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li{
+border: solid ;
+border-radius: 10px;
+
+width: 25%;
+margin-left: 5px;
+display:inline-block;
+}

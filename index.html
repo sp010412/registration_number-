@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration_number.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registration Number</h1>
+        <div>
+            <h3>Plate number</h3>
+            <input type="text" name="" value="" placeholder="eg.CA 12345" class="plates">
+            <span id="error"></span>
+        </div>
+        <div>
+            <button class="button-primary add" type="button" name="button"> <span>ADD</span></button>
+
+        </div>
+
+        <div class="f-group">
+            <label for="">Select from which Town</label>
+            <select name="slct1" id="slct1" class="slct1">
+                <option value="CA">Cape Town</option>
+                <option value="PA">Pretoria</option>
+                <option value="WC">Worcster</option>
+            </select>
+
+        </div>
+        <div>
+            <button class="button-primary show" type="button" name="button"> <span>SHOW</span></button>
+        </div>
+        <div>
+            <button class="button-primary showAll" type="button" name="button"> <span>Show All</span></button>
+        </div>
+
+        <div>
+            <button class="button-primary reset" type="button" name="button"> <span>RESET</span></button>
+        </div>
+
+
+        <div>
+            <ul id="displayedPlate">
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+<script src="factory.js" charset="utf-8"></script>
+<script src="registration_number.js" charset="utf-8"></script>
+
+</html>

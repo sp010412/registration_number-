@@ -42,7 +42,12 @@ function added() {
     }
 
     else {
-        errorElem.innerHTML = "Regisration already exists!"
+        errorElem.innerHTML = "Regisration already exists!";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
+    
     }
 }
 addBtn.addEventListener('click', added);
@@ -67,14 +72,6 @@ function conditions() {
         return;
     }
 
-    else if (key === textBox.value) {
-        errorElem.innerHTML = "Regisration plate has been added!";
-
-        setTimeout(function () {
-            errorElem.innerHTML = ""
-        }, 3000);
-        return;
-    }
 }
 addBtn.addEventListener('click', conditions);
 
@@ -117,6 +114,11 @@ function showed() {
         }
     } else {
         errorElem.innerHTML = "No registration plates added!";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
+    
     }
 }
 showBtn.addEventListener('click', showed);
@@ -131,7 +133,7 @@ resetBtn.addEventListener('click', clear);
 function allPlatesList() {
     if (registrationInsta.getStorePlates()) {
         displayed(list)
-    } if(list.length === 0) {
+    } if (list.length === 0) {
         errorElem.innerHTML = "No registration plates added!";
         setTimeout(function () {
             errorElem.innerHTML = ""

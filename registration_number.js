@@ -39,6 +39,7 @@ function added() {
         let key = registrationInsta.getStorePlates();
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)
+        errorElem.innerHTML = "Plate added!";
     }
 
     else {
@@ -142,7 +143,5 @@ function allPlatesList() {
     }
 }
 showAllBtn.addEventListener('click', allPlatesList);
-
-
 
 

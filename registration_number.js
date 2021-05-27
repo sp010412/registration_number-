@@ -33,13 +33,16 @@ function displayed(plateIn) {
     }
 }
 
+
 function added() {
     if (registrationInsta.storePlates(textBox.value)) {
         let key = registrationInsta.getStorePlates();
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)
-    } else {
-        errorElem.innerHTML = "Regisration plate has been added!"
+    }
+
+    else {
+        errorElem.innerHTML = "Regisration already exists!"
     }
 }
 addBtn.addEventListener('click', added);
@@ -88,28 +91,32 @@ var pa = []
 var wc = []
 
 function showed() {
-    let filteredList1 = list.filter(function (currentElement) {
-        return currentElement.startsWith('CA');
-    });
-    let filteredList2 = list.filter(function (currentElement) {
-        return currentElement.startsWith('PA');
-    });
-    let filteredList3 = list.filter(function (currentElement) {
-        return currentElement.startsWith('WC');
-    });
+    if (list.length > 0) {
+        let filteredList1 = list.filter(function (currentElement) {
+            return currentElement.startsWith('CA');
+        });
+        let filteredList2 = list.filter(function (currentElement) {
+            return currentElement.startsWith('PA');
+        });
+        let filteredList3 = list.filter(function (currentElement) {
+            return currentElement.startsWith('WC');
+        });
 
-    var towns = document.querySelector(".slct1");
-    if (towns.value === "CA") {
-        cp.push(filteredList1)
-        displayed(cp)
-    }
-    else if (towns.value === "PA") {
-        pa.push(filteredList2)
-        displayed(pa)
-    }
-    else if (towns.value === "WC") {
-        wc.push(filteredList3)
-        displayed(wc)
+        var towns = document.querySelector(".slct1");
+        if (towns.value === "CA") {
+            cp.push(filteredList1)
+            displayed(cp)
+        }
+        else if (towns.value === "PA") {
+            pa.push(filteredList2)
+            displayed(pa)
+        }
+        else if (towns.value === "WC") {
+            wc.push(filteredList3)
+            displayed(wc)
+        }
+    } else {
+        errorElem.innerHTML = "No registration plates added!";
     }
 }
 showBtn.addEventListener('click', showed);
@@ -122,25 +129,18 @@ resetBtn.addEventListener('click', clear);
 
 
 function allPlatesList() {
-    registrationInsta.getStorePlates()
-    displayed(list)
-}
-showAllBtn.addEventListener('click', allPlatesList);
-
-
-function conditions2() {
-    if (list = " ") {
+    if (registrationInsta.getStorePlates()) {
+        displayed(list)
+    } if(list.length === 0) {
         errorElem.innerHTML = "No registration plates added!";
-
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3000);
         return;
     }
-
-    // if (list = " ") {
-    //     displayed()
-    // }
 }
-showBtn.addEventListener('click', conditions2);
-showAllBtn.addEventListener('click', conditions2);
+showAllBtn.addEventListener('click', allPlatesList);
+
+
+
+

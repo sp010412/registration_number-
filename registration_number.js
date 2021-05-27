@@ -57,7 +57,7 @@ function conditions() {
     }
 
     else if (valid.test(textBox.value) != true) {
-        errorElem.innerHTML = "Not a registration plate: eg; CA 1234 OR PA 99965"
+        errorElem.innerHTML = "Not a registration plate! eg; CA 1234 OR PA 99965"
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3000);
@@ -72,7 +72,6 @@ function conditions() {
         }, 3000);
         return;
     }
-    // console.log(list)
 }
 addBtn.addEventListener('click', conditions);
 
@@ -127,3 +126,21 @@ function allPlatesList() {
     displayed(list)
 }
 showAllBtn.addEventListener('click', allPlatesList);
+
+
+function conditions2() {
+    if (list = " ") {
+        errorElem.innerHTML = "No registration plates added!";
+
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
+    }
+
+    // if (list = " ") {
+    //     displayed()
+    // }
+}
+showBtn.addEventListener('click', conditions2);
+showAllBtn.addEventListener('click', conditions2);

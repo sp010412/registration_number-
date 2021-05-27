@@ -58,7 +58,7 @@ button span {
     transition: 0.5s;
 }
 
-button span:after {
+/*button span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -73,8 +73,250 @@ button:hover span {
 
 button:hover span:after {
     opacity: 1;
-    right: 0;
+    right: 0; 
+}*/
+
+.adjust {
+    display: flex;
 }
-.adjust{
-    display:flex ;
+
+.buttons {
+    display: inline-flex;
+    margin-top: 70px;
+}
+
+.title {
+    font-size: 25px;
+}
+
+.add {
+    margin-top: -55px;
+}
+
+#error {
+    color: red;
+    font-size: 35px;
+}
+
+select {
+    padding: 10px;
+    padding-right: 8px;
+    background: lightsteelblue;
+    font-size: 18px;
+}
+
+@media (max-width:1020px) {
+    body {
+        height: 100vh;
+    }
+    button {
+        font-size: 35px;
+    }
+    .buttons {
+        margin-top: 80px;
+    }
+    #error {
+        color: red;
+        font-size: 35px;
+    }
+    li {
+        border: solid;
+        border-radius: 10px;
+        width: 100%;
+        margin: 2px;
+    }
+    .add {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 30px;
+    }
+    select {
+        padding: 10px;
+        background: lightsteelblue;
+        font-size: 20px;
+    }
+    .plates {
+        width: 50%;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:720px) {
+    body {
+        height: 100vh;
+    }
+    button {
+        font-size: 23px;
+    }
+    .buttons {
+        margin-top: 60px;
+    }
+    #error {
+        color: red;
+        font-size: 30px;
+    }
+    li {
+        border: solid;
+        border-radius: 10px;
+        width: 100%;
+        margin: 2px;
+    }
+    .add {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 25px;
+    }
+    select {
+        padding: 10px;
+        background: lightsteelblue;
+        font-size: 20px;
+    }
+    .plates {
+        width: 50%;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:540px) {
+    body {
+        height: 100vh;
+    }
+    button {
+        font-size: 23px;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+    #error {
+        color: red;
+        font-size: 25px;
+    }
+    li {
+        border: solid;
+        border-radius: 10px;
+        width: 100%;
+        margin: 2px;
+    }
+    .add {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    select {
+        padding: 10px;
+        background: lightsteelblue;
+        font-size: 20px;
+    }
+    .plates {
+        width: 100%;
+        font-size: 20px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:380px) {
+    body {
+        height: 100vh;
+    }
+    button {
+        font-size: 20px;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+    #error {
+        color: red;
+        font-size: 15px;
+    }
+    li {
+        border: solid;
+        border-radius: 10px;
+        width: 70%;
+        margin-left: 2px;
+        display: inline-block;
+    }
+    .add {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    select {
+        padding: 1px;
+        background: lightsteelblue;
+        font-size: 15px;
+    }
+    .plates {
+        width: 100%;
+        padding-top: 5PX;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:290px) {
+    body {
+        height: 100vh;
+    }
+    button {
+        font-size: 15px;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+    #error {
+        color: red;
+        font-size: 25px;
+    }
+    li {
+        border: solid;
+        border-radius: 10px;
+        width: 100%;
+        margin-left: 2px;
+        display: inline-block;
+    }
+    .add {
+        margin-top: 10px;
+    }
+    .title {
+        font-size: 15px;
+    }
+    select {
+        padding: 1px;
+        background: lightsteelblue;
+        font-size: 15px;
+    }
+    .plates {
+        width: 100%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 15px;
+    }
 }

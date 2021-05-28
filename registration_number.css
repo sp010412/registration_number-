@@ -1,28 +1,35 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 body {
     text-decoration: none;
-    background: url(http://www.pptbackgrounds.org/uploads/industry-a-plan-of-the-car-powerpoint-backgrounds.jpg) no-repeat center/cover;
+    background: url(https://www.wallpapertip.com/wmimgs/129-1291608_audi-cars-wallpapers-full-hd-full-hd-audi.jpg) no-repeat center/cover;
 }
 
 .container {
     border: none;
-    width: 60%;
-    text-align: center;
-    height: 50vh;
+    width: 80%;
+    height: 90vh;
     margin: auto;
-    margin-left: 12px;
 }
 
-.plates {
-    width: 30%;
-}
+/* .plates {
+    padding: 12px;
+    background-color: grey;
+} */
 
 h1 {
+    color: white;
     padding: 2%;
+    font-size: 30px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 h3 {
     display: inline;
     font-size: 25px;
+    color: white;
+    font-family: 'Architects Daughter', cursive;
 }
 
 ul {
@@ -31,10 +38,12 @@ ul {
 
 li {
     border: solid;
-    border-radius: 10px;
+    border-radius: 6px;
     width: 25%;
-    margin-left: 5px;
+    margin: 2px;
     display: inline-block;
+padding : 5px;
+background: orange;
 }
 
 button {
@@ -86,7 +95,7 @@ select {
     font-size: 18px;
 }
 
-@media (max-width:1030px) {
+/* @media (max-width:1030px) {
     body {
         height: 100vh;
     }
@@ -111,8 +120,8 @@ select {
     }
     .title {
         font-size: 30px;
-    }
-    select {
+    } */
+    /* select {
         padding: 10px;
         background: lightsteelblue;
         font-size: 20px;
@@ -134,8 +143,8 @@ select {
         height: 100vh;
     }
     button {
-        font-size: 23px;
-    }
+        font-size: 23px; */
+    /* }
     .buttons {
         margin-top: 60px;
     }
@@ -149,15 +158,15 @@ select {
         width: 100%;
         margin: 2px;
     }
-    .add {
+    /* .add {
         margin-top: 10px;
     }
     .title {
         font-size: 25px;
     }
     select {
-        padding: 10px;
-        background: lightsteelblue;
+        padding: 10px; */
+        /* background: lightsteelblue;
         font-size: 20px;
     }
     .plates {
@@ -300,4 +309,6 @@ select {
     h3 {
         font-size: 15px;
     }
-}
+} */ 
+
+

@@ -40,13 +40,17 @@ function added() {
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)
         errorElem.innerHTML = "Plate added!";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3000);
+        return;
     }
 
     else {
         errorElem.innerHTML = "Regisration already exists!";
         setTimeout(function () {
             errorElem.innerHTML = ""
-        }, 3000);
+        }, 3500);
         return;
 
     }
@@ -61,7 +65,7 @@ function conditions() {
 
         window.setTimeout(function () {
             errorElem.innerHTML = ""
-        }, 3000);
+        }, 3500);
         return;
     }
 
@@ -69,7 +73,7 @@ function conditions() {
         errorElem.innerHTML = "Not a registration plate! eg; CA 1234 OR PA 99965"
         setTimeout(function () {
             errorElem.innerHTML = ""
-        }, 3000);
+        }, 3500);
         return;
     }
 
@@ -117,7 +121,7 @@ function showed() {
         errorElem.innerHTML = "No registration plates added!";
         setTimeout(function () {
             errorElem.innerHTML = ""
-        }, 3000);
+        }, 3500);
         return;
 
     }
@@ -138,7 +142,7 @@ function allPlatesList() {
         errorElem.innerHTML = "No registration plates added!";
         setTimeout(function () {
             errorElem.innerHTML = ""
-        }, 3000);
+        }, 3500);
         return;
     }
 }

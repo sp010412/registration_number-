@@ -48,7 +48,7 @@ function added() {
             errorElem.innerHTML = ""
         }, 3000);
         return;
-    
+
     }
 }
 addBtn.addEventListener('click', added);
@@ -119,7 +119,7 @@ function showed() {
             errorElem.innerHTML = ""
         }, 3000);
         return;
-    
+
     }
 }
 showBtn.addEventListener('click', showed);
@@ -143,5 +143,13 @@ function allPlatesList() {
     }
 }
 showAllBtn.addEventListener('click', allPlatesList);
+
+
+
+
+window.onload = displayed(list);
+
+
+
 
 

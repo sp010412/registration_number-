@@ -86,9 +86,10 @@ button span {
 
 .add {
     background-color: white;
+    border-radius: 50%;
     color: black;
     border: 5px solid orange;
-    width: 25%;
+    width: 8%;
     transition-duration: 0.4s;
     text-align: center;
     font-family: 'Merienda', cursive;
@@ -117,9 +118,8 @@ button span {
 }
 
 .add:hover span{
-    padding-right: 25px;
+    padding-right: 20px;
 }
-
 
 .add:hover span:after{
     opacity: 1;

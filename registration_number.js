@@ -148,12 +148,23 @@ function allPlatesList() {
 }
 showAllBtn.addEventListener('click', allPlatesList);
 
-
-
-
 window.onload = displayed(list);
 
+function conditions3(){
+var cp = [];
+var pa = [];
+var wc = [];
 
+var towns = document.querySelector(".slct1");
 
-
-
+if(cp.length == 0 && towns.value === "CA" ){
+    return errorElem.innerHTML = "No registration plates for Cape Town!";
+}
+if(pa.length == 0 && towns.value === "PA" ){
+    return errorElem.innerHTML = "No registration plates for Pretoria!";
+}
+if(wc.length == 0 && towns.value === "WC" ){
+    return errorElem.innerHTML = "No registration plates for Worcster!";
+}
+}
+showBtn.addEventListener('click', conditions3);

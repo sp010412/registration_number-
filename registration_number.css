@@ -140,6 +140,52 @@ select {
 
 @media (max-width:600px) {
     h1 {
-        font-size: 25px; 
+        font-size: 25px;
+    }
+    .add {
+        background-color: white;
+        border-radius: 50%;
+        color: black;
+        border: 5px solid orange;
+        width: 20%;
+        transition-duration: 0.4s;
+        text-align: center;
+        font-family: 'Merienda', cursive;
+    }
+}
+
+@media (max-width:480px) {
+    h1 {
+        font-size: 22px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .add {
+        background-color: white;
+        border-radius: 50%;
+        color: black;
+        border: 5px solid orange;
+        width: 25%;
+        transition-duration: 0.4s;
+        text-align: center;
+        font-family: 'Merienda', cursive;
+    }
+    .buttons {
+        display: block;
+        margin-top: 0;
+    }
+    .show{
+        margin-top: 90px;
+    }
+    .slct1{
+        font-size: 15px;
+    }
+
+    body{
+        height: 120vh;
+    }
+    .plates{
+        width: 10%;
     }
 }

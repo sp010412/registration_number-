@@ -95,20 +95,20 @@ button span {
     font-family: 'Merienda', cursive;
 }
 
-.add:hover{
-    background-color:orange;
+.add:hover {
+    background-color: orange;
     color: white;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.add span{
+.add span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.add span:after{
+.add span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -117,15 +117,14 @@ button span {
     transition: 0.5s;
 }
 
-.add:hover span{
+.add:hover span {
     padding-right: 20px;
 }
 
-.add:hover span:after{
+.add:hover span:after {
     opacity: 1;
     right: 0;
 }
-
 
 #error {
     color: red;
@@ -139,221 +138,8 @@ select {
     font-size: 18px;
 }
 
-/* @media (max-width:1030px) {
-    body {
-        height: 100vh;
-    }
-    button {
-        font-size: 35px;
-    }
-    .buttons {
-        margin-top: 80px;
-    }
-    #error {
-        color: red;
-        font-size: 35px;
-    }
-    li {
-        border: solid;
-        border-radius: 10px;
-        width: 100%;
-        margin: 2px;
-    }
-    .add {
-        margin-top: 10px;
-    }
-    .title {
-        font-size: 30px;
-    } */
-
-/* select {
-        padding: 10px;
-        background: lightsteelblue;
-        font-size: 20px;
-    }
-    .plates {
-        width: 55%;
-        font-size: 20px;
-    }
+@media (max-width:600px) {
     h1 {
-        font-size: 38px;
-    }
-    h3 {
-        font-size: 25px;
+        font-size: 25px; 
     }
 }
-
-@media (max-width:720px) {
-    body {
-        height: 100vh;
-    }
-    button {
-        font-size: 23px; */
-
-/* }
-    .buttons {
-        margin-top: 60px;
-    }
-    #error {
-        color: red;
-        font-size: 30px;
-    }
-    li {
-        border: solid;
-        border-radius: 10px;
-        width: 100%;
-        margin: 2px;
-    }
-    /* .add {
-        margin-top: 10px;
-    }
-    .title {
-        font-size: 25px;
-    }
-    select {
-        padding: 10px; */
-
-/* background: lightsteelblue;
-        font-size: 20px;
-    }
-    .plates {
-        width: 50%;
-        font-size: 20px;
-    }
-    h1 {
-        font-size: 38px;
-    }
-    h3 {
-        font-size: 25px;
-    }
-}
-
-@media (max-width:540px) {
-    body {
-        height: 100vh;
-    }
-    button {
-        font-size: 23px;
-    }
-    .buttons {
-        margin-top: 10px;
-    }
-    #error {
-        color: red;
-        font-size: 25px;
-    }
-    li {
-        border: solid;
-        border-radius: 10px;
-        width: 100%;
-        margin: 2px;
-    }
-    .add {
-        margin-top: 10px;
-    }
-    .title {
-        font-size: 20px;
-    }
-    select {
-        padding: 10px;
-        background: lightsteelblue;
-        font-size: 20px;
-    }
-    .plates {
-        width: 100%;
-        font-size: 20px;
-    }
-    h1 {
-        font-size: 26px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width:380px) {
-    body {
-        height: 100vh;
-    }
-    button {
-        font-size: 20px;
-    }
-    .buttons {
-        margin-top: 10px;
-    }
-    #error {
-        color: red;
-        font-size: 15px;
-    }
-    li {
-        border: solid;
-        border-radius: 10px;
-        width: 70%;
-        margin-left: 2px;
-        display: inline-block;
-    }
-    .add {
-        margin-top: 10px;
-    }
-    .title {
-        font-size: 20px;
-    }
-    select {
-        padding: 1px;
-        background: lightsteelblue;
-        font-size: 15px;
-    }
-    .plates {
-        width: 100%;
-        padding-top: 5PX;
-    }
-    h1 {
-        font-size: 30px;
-    }
-    h3 {
-        font-size: 20px;
-    }
-}
-
-@media (max-width:290px) {
-    body {
-        height: 100vh;
-    }
-    button {
-        font-size: 15px;
-    }
-    .buttons {
-        margin-top: 10px;
-    }
-    #error {
-        color: red;
-        font-size: 25px;
-    }
-    li {
-        border: solid;
-        border-radius: 10px;
-        width: 100%;
-        margin-left: 2px;
-        display: inline-block;
-    }
-    .add {
-        margin-top: 10px;
-    }
-    .title {
-        font-size: 15px;
-    }
-    select {
-        padding: 1px;
-        background: lightsteelblue;
-        font-size: 15px;
-    }
-    .plates {
-        width: 100%;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    h3 {
-        font-size: 15px;
-    }
-} */

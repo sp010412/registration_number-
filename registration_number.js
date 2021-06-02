@@ -25,7 +25,7 @@ function displayed(plateIn) {
     // while (document.getElementById("displayedPlate").hasChildNodes()) {
     //     document.getElementById("displayedPlate").removeChild(document.getElementById("displayedPlate").firstChild)
     // }
-    document.getElementById("displayedPlate").innerHTML="";
+    document.getElementById("displayedPlate").innerHTML = "";
 
     for (var i = 0; i < plateIn.length; i++) {
         var holder = document.createElement("li");
@@ -90,27 +90,25 @@ function remove() {
 addBtn.addEventListener('click', remove);
 
 
-var cp = []
-var pa = []
-var wc = []
+let filteredList1 = list.filter(function (currentElement) {
+    return currentElement.startsWith('CA');
+});
+let filteredList2 = list.filter(function (currentElement) {
+    return currentElement.startsWith('PA');
+});
+let filteredList3 = list.filter(function (currentElement) {
+    return currentElement.startsWith('WC');
+});
+
 
 function showed() {
     if (list.length > 0) {
-        let filteredList1 = list.filter(function (currentElement) {
-            return currentElement.startsWith('CA');
-        });
-        let filteredList2 = list.filter(function (currentElement) {
-            return currentElement.startsWith('PA');
-        });
-        let filteredList3 = list.filter(function (currentElement) {
-            return currentElement.startsWith('WC');
-        });
 
         var towns = document.querySelector(".slct1");
         if (towns.value === "CA") {
             displayed(filteredList1);
         }
-        else if (towns.value === "PA") {  
+        else if (towns.value === "PA") {
             displayed(filteredList2)
         }
         else if (towns.value === "WC") {
@@ -153,23 +151,20 @@ showAllBtn.addEventListener('click', allPlatesList);
 window.onload = displayed(list);
 
 
-// function conditions3(){
-// var cp = [];
-// var pa = [];
-// var wc = [];
+function conditions3() {
 
-// var towns = document.querySelector(".slct1");
+    var towns = document.querySelector(".slct1");
 
-// if(cp.length == 0 && towns.value === "CA" ){
-//     return errorElem.innerHTML = "No registration plates for Cape Town!";
-// }
-// if(pa.length == 0 && towns.value === "PA" ){
-//     return errorElem.innerHTML = "No registration plates for Pretoria!";
-// }
-// if(wc.length == 0 && towns.value === "WC" ){
-//     return errorElem.innerHTML = "No registration plates for Worcster!";
-// }
-// }
-// showBtn.addEventListener('click', conditions3);
+    if (filteredList1.length == 0 && towns.value === "CA") {
+        return errorElem.innerHTML = "No registration plates for Cape Town!";
+    }
+    if (filteredList2.length == 0 && towns.value === "PA") {
+        return errorElem.innerHTML = "No registration plates for Pretoria!";
+    }
+    if (filteredList3.length == 0 && towns.value === "WC") {
+        return errorElem.innerHTML = "No registration plates for Worcster!";
+    }
+}
+showBtn.addEventListener('click', conditions3);
 
 

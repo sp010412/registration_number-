@@ -37,11 +37,13 @@ function displayed(plateIn) {
 
 
 function added() {
+    errorElem.style.color = "red"
     if (registrationInsta.storePlates(textBox.value.toUpperCase())) {
         let key = registrationInsta.getStorePlates();
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)
-        errorElem.innerHTML = "Plate added!";
+        errorElem.innerHTML= "Plate added!";
+        errorElem.style.color = "green"
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3000);
@@ -72,7 +74,7 @@ function conditions() {
     }
 
     else if (valid.test(textBox.value) != true) {
-        errorElem.innerHTML = "Not a registration plate! eg; CA 1234 OR PA 99965"
+        errorElem.innerHTML = "Not a registration plate! eg; CA 12345"
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);

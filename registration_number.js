@@ -37,7 +37,7 @@ function displayed(plateIn) {
 
 
 function added() {
-    if (registrationInsta.storePlates(textBox.value)) {
+    if (registrationInsta.storePlates(textBox.value.toUpperCase())) {
         let key = registrationInsta.getStorePlates();
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)

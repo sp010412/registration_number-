@@ -1,12 +1,12 @@
 function registrationNumbers(other) {
 
     var allPlateIn = other || [];
-    var valid = /[A-Z]{2} [0-9]{5}/i
+    var valid = /[A-Z]{2} [0-9]{5}/
 
     function storePlates(plateIn) {
 
 
-        if(plateIn.match(valid)){
+        if (plateIn.match(valid)) {
 
             if (!allPlateIn.includes(plateIn)) {
                 allPlateIn.push(plateIn)
@@ -16,7 +16,7 @@ function registrationNumbers(other) {
             }
         }
     }
-    
+
 
     function getStorePlates() {
         return allPlateIn

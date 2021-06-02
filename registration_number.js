@@ -22,9 +22,11 @@ var registrationInsta = registrationNumbers(list);
 
 //var regEx = /^((CA|PA|WC)\s\d{3}\-\d{3})$|^((CA|PA|WC)\s\d{3}\d{3})$|^((CA|PA|WC)\s\d{3}\s\d{3})$/;
 function displayed(plateIn) {
-    while (document.getElementById("displayedPlate").hasChildNodes()) {
-        document.getElementById("displayedPlate").removeChild(document.getElementById("displayedPlate").firstChild)
-    }
+    // while (document.getElementById("displayedPlate").hasChildNodes()) {
+    //     document.getElementById("displayedPlate").removeChild(document.getElementById("displayedPlate").firstChild)
+    // }
+    document.getElementById("displayedPlate").innerHTML="";
+
     for (var i = 0; i < plateIn.length; i++) {
         var holder = document.createElement("li");
         var addedOn = document.createTextNode(plateIn[i]);
@@ -106,16 +108,13 @@ function showed() {
 
         var towns = document.querySelector(".slct1");
         if (towns.value === "CA") {
-            cp.push(filteredList1)
-            displayed(cp)
+            displayed(filteredList1);
         }
-        else if (towns.value === "PA") {
-            pa.push(filteredList2)
-            displayed(pa)
+        else if (towns.value === "PA") {  
+            displayed(filteredList2)
         }
         else if (towns.value === "WC") {
-            wc.push(filteredList3)
-            displayed(wc)
+            displayed(filteredList3)
         }
     } else {
         errorElem.innerHTML = "No registration plates added!";
@@ -154,23 +153,23 @@ showAllBtn.addEventListener('click', allPlatesList);
 window.onload = displayed(list);
 
 
-function conditions3(){
-var cp = [];
-var pa = [];
-var wc = [];
+// function conditions3(){
+// var cp = [];
+// var pa = [];
+// var wc = [];
 
-var towns = document.querySelector(".slct1");
+// var towns = document.querySelector(".slct1");
 
-if(cp.length == 0 && towns.value === "CA" ){
-    return errorElem.innerHTML = "No registration plates for Cape Town!";
-}
-if(pa.length == 0 && towns.value === "PA" ){
-    return errorElem.innerHTML = "No registration plates for Pretoria!";
-}
-if(wc.length == 0 && towns.value === "WC" ){
-    return errorElem.innerHTML = "No registration plates for Worcster!";
-}
-}
-showBtn.addEventListener('click', conditions3);
+// if(cp.length == 0 && towns.value === "CA" ){
+//     return errorElem.innerHTML = "No registration plates for Cape Town!";
+// }
+// if(pa.length == 0 && towns.value === "PA" ){
+//     return errorElem.innerHTML = "No registration plates for Pretoria!";
+// }
+// if(wc.length == 0 && towns.value === "WC" ){
+//     return errorElem.innerHTML = "No registration plates for Worcster!";
+// }
+// }
+// showBtn.addEventListener('click', conditions3);
 
 

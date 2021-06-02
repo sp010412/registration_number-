@@ -175,17 +175,23 @@ select {
         display: block;
         margin-top: 0;
     }
-    .show{
-        margin-top: 90px;
-    }
-    .slct1{
+    button {
+        width: 30%;
         font-size: 15px;
     }
-
-    body{
+    .show {
+        margin-top: 90px;
+    }
+    .slct1 {
+        font-size: 15px;
+    }
+    body {
         height: 120vh;
     }
-    .plates{
-        width: 10%;
+    .plates {
+        width: 50%;
+    }
+    .title {
+        font-size: 20px;
     }
 }

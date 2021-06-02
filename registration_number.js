@@ -29,7 +29,7 @@ function displayed(plateIn) {
 
     for (var i = 0; i < plateIn.length; i++) {
         var holder = document.createElement("li");
-        var addedOn = document.createTextNode(plateIn[i]);
+        var addedOn = document.createTextNode(plateIn[i].toUpperCase());
         holder.appendChild(addedOn);
         document.getElementById("displayedPlate").appendChild(holder);
     }
@@ -59,7 +59,7 @@ function added() {
 }
 addBtn.addEventListener('click', added);
 
-var valid = /[A-Z]{2} [0-9]{5}/
+var valid = /[A-Z]{2} [0-9]{5}/i
 function conditions() {
     let key = registrationInsta.getStorePlates();
     if (textBox.value == "") {

@@ -14,10 +14,20 @@ function registrationNumbers(other) {
         }
     }
 
-
     function getStorePlates() {
         return allPlateIn
     }
+
+
+    let filteredList1 = allPlateIn.filter(function (currentElement) {
+        return currentElement.startsWith('CA');
+    });
+    let filteredList2 = allPlateIn.filter(function (currentElement) {
+        return currentElement.startsWith('PA');
+    });
+    let filteredList3 = allPlateIn.filter(function (currentElement) {
+        return currentElement.startsWith('WC');
+    });
 
     return {
         storePlates,

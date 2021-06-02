@@ -49,7 +49,7 @@ function added() {
     }
 
     else {
-        errorElem.innerHTML = "Regisration already exists!";
+        errorElem.innerHTML = "Registration already exists!";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);

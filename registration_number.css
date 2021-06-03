@@ -13,6 +13,13 @@ body {
     text-align: center;
 }
 
+p {
+    background: white;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
 .plates {
     border: 3px outset lightskyblue;
     outline: 0;
@@ -73,7 +80,7 @@ button span {
 
 .adjust {
     display: flex;
-   justify-content: center;
+    justify-content: center;
 }
 
 .buttons {

@@ -19,25 +19,17 @@ function registrationNumbers(other) {
         return allPlateIn
     }
 
-    let filteredList1 = allPlateIn.filter(function (currentElement) {
-        return currentElement.startsWith('CA');
-    });
-    let filteredList2 = allPlateIn.filter(function (currentElement) {
-        return currentElement.startsWith('PA');
-    });
-    let filteredList3 = allPlateIn.filter(function (currentElement) {
-        return currentElement.startsWith('WC');
-    });
+    var filteredLst = []
 
-    function getfilteredList1() {
-        return filteredList1
+    function filtered(element) {
+        for (var i = 0; i < allPlateIn.length; i++) {
+            if (allPlateIn[i].startsWith(element)) {
+                filteredLst.push(allPlateIn[i])
+            }
+        }
+        return filteredLst
     }
-    function getfilteredList2() {
-        return filteredList2
-    }
-    function getfilteredList3() {
-        return filteredList3
-    }
+
 
     function getStorePlates() {
         return allPlateIn
@@ -46,9 +38,7 @@ function registrationNumbers(other) {
     return {
         storePlates,
         getStorePlates,
-        getfilteredList1,
-        getfilteredList2,
-        getfilteredList3,
+        filtered,
     }
 
 }

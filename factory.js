@@ -1,7 +1,9 @@
 function registrationNumbers(other) {
 
     var allPlateIn = other || [];
-    var valid = /[A-Z]{2} [0-9]{5}/
+   // var valid = /[A-Z]{2} [0-9]{5}/
+    //var regEx = /^((CA|PA|WC)\s\d{3}\-\d{3})$|^((CA|PA|WC)\s\d{3}\d{3})$|^((CA|PA|WC)\s\d{3}\s\d{3})$/;
+    var valid = /^((CA|PA|WC)\s\d{3}\-\d{3})$|^((CA|PA|WC)\s\d{3}\s\d{3})$|^((CA|PA|WC)\s\d{4})$/;
 
     function storePlates(plateIn) {
 

@@ -61,7 +61,10 @@ function added() {
 }
 addBtn.addEventListener('click', added);
 
-var valid = /[A-Z]{2} [0-9]{5}/i
+//var valid = /[A-Z]{2} [0-9]{5}/i
+//var regEx = /^((CA|PA|WC)\s\d{3}\-\d{3})$|^((CA|PA|WC)\s\d{3}\d{3})$|^((CA|PA|WC)\s\d{3}\s\d{3})$/;
+var valid = /^((CA|PA|WC)\s\d{3}\-\d{3})$|^((CA|PA|WC)\s\d{3}\s\d{3})$|^((CA|PA|WC)\s\d{4})$/i;
+
 function conditions() {
     let key = registrationInsta.getStorePlates();
     if (textBox.value == "") {
@@ -73,7 +76,7 @@ function conditions() {
         return;
     }
 
-    else if (valid.test(textBox.value) != true) {
+    else if (valid.test(textBox.value)!= true) {
         errorElem.innerHTML = "Not a registration plate! eg; CA 12345"
         setTimeout(function () {
             errorElem.innerHTML = ""

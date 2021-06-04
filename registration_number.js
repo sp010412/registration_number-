@@ -108,7 +108,16 @@ let filteredList3 = list.filter(function (currentElement) {
 
 function showed() {
     if (list.length > 0) {
-
+        let filteredList1 = list.filter(function (currentElement) {
+            return currentElement.startsWith('CA');
+        });
+        let filteredList2 = list.filter(function (currentElement) {
+            return currentElement.startsWith('PA');
+        });
+        let filteredList3 = list.filter(function (currentElement) {
+            return currentElement.startsWith('WC');
+        });
+        
         var towns = document.querySelector(".slct1");
         if (towns.value === "CA") {
             displayed(filteredList1);
@@ -167,7 +176,7 @@ function conditions3() {
         return errorElem.innerHTML = "No registration plates for Pretoria!";
     }
     if (filteredList3.length == 0 && towns.value === "WC") {
-        return errorElem.innerHTML = "No registration plates for Worcster!";
+        return errorElem.innerHTML = "No registration plates for Worcester!";
     }
 }
 showBtn.addEventListener('click', conditions3);

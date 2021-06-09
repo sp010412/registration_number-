@@ -42,8 +42,8 @@ function added() {
         let key = registrationInsta.getStorePlates();
         localStorage.setItem('plates', JSON.stringify(key));
         displayed(key)
-        errorElem.innerHTML= "Plate added!";
-        errorElem.style.color = "green"
+        errorElem.innerHTML = "Plate added!";
+        errorElem.style.color = "green";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3000);
@@ -52,6 +52,7 @@ function added() {
 
     else {
         errorElem.innerHTML = "Registration already exists!";
+        errorElem.style.color = "red";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);
@@ -69,15 +70,16 @@ function conditions() {
     let key = registrationInsta.getStorePlates();
     if (textBox.value == "") {
         errorElem.innerHTML = "Enter a registration plate!";
-
+        errorElem.style.color = "red";
         window.setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);
         return;
     }
 
-    else if (valid.test(textBox.value)!= true) {
+    else if (valid.test(textBox.value) != true) {
         errorElem.innerHTML = "Not a registration plate! eg; CA 12345"
+        errorElem.style.color = "red";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);
@@ -117,7 +119,7 @@ function showed() {
         let filteredList3 = list.filter(function (currentElement) {
             return currentElement.startsWith('WC');
         });
-        
+
         var towns = document.querySelector(".slct1");
         if (towns.value === "CA") {
             displayed(filteredList1);
@@ -130,6 +132,7 @@ function showed() {
         }
     } else {
         errorElem.innerHTML = "No registration plates added!";
+        errorElem.style.color = "red";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);
@@ -151,6 +154,7 @@ function allPlatesList() {
         displayed(list)
     } if (list.length === 0) {
         errorElem.innerHTML = "No registration plates added!";
+        errorElem.style.color = "red";
         setTimeout(function () {
             errorElem.innerHTML = ""
         }, 3500);
@@ -170,13 +174,28 @@ function conditions3() {
     var towns = document.querySelector(".slct1");
 
     if (filteredList1.length === 0 && towns.value === "CA") {
-        return errorElem.innerHTML = "No registration plates for Cape Town!";
+        errorElem.innerHTML = "No registration plates for Cape Town!";
+        errorElem.style.color = "red";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3500);
+        return;
     }
     if (filteredList2.length === 0 && towns.value === "PA") {
-        return errorElem.innerHTML = "No registration plates for Pretoria!";
+        errorElem.innerHTML = "No registration plates for Pretoria!";
+        errorElem.style.color = "red";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3500);
+        return;
     }
     if (filteredList3.length === 0 && towns.value === "WC") {
-        return errorElem.innerHTML = "No registration plates for Worcester!";
+        errorElem.innerHTML = "No registration plates for Worcester!";
+        errorElem.style.color = "red";
+        setTimeout(function () {
+            errorElem.innerHTML = ""
+        }, 3500);
+        return;
     }
 }
 showBtn.addEventListener('click', conditions3);

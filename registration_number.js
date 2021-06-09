@@ -169,13 +169,13 @@ function conditions3() {
 
     var towns = document.querySelector(".slct1");
 
-    if (filteredList1.length == 0 && towns.value === "CA") {
+    if (filteredList1.length === 0 && towns.value === "CA") {
         return errorElem.innerHTML = "No registration plates for Cape Town!";
     }
-    if (filteredList2.length == 0 && towns.value === "PA") {
+    if (filteredList2.length === 0 && towns.value === "PA") {
         return errorElem.innerHTML = "No registration plates for Pretoria!";
     }
-    if (filteredList3.length == 0 && towns.value === "WC") {
+    if (filteredList3.length === 0 && towns.value === "WC") {
         return errorElem.innerHTML = "No registration plates for Worcester!";
     }
 }
